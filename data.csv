@@ -1,0 +1,6 @@
+Vulnerability,Description/how its detected,Severity level,Recommended course of action
+Weak password,unauthenticated,medium,"Change password (add capital letter, number, special character)"
+Unauthorized access to network,Systems that are accessed by external customers or users are at risk,medium,"Change network security, change password"
+malware,network scan: identify abnormal activity,critical,Uninstall or reset to the latest backup
+Unsupported application,,low,Update or uninstall application
+Outdated or unpatched software,,low,Update or uninstall software

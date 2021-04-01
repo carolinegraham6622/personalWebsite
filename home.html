@@ -1,0 +1,461 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Caroline Graham</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<style>
+
+.anim {
+  background: gray repeat 0 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  height: 500px;
+  padding-top: 120px;
+  box-sizing: border-box;
+  -webkit-animation: slide 20s linear infinite;
+}
+
+.anim h1 {
+  font-family: sans-serif;
+}
+
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
+}
+
+  .pink {
+    background-color: rgb(228, 130, 171);
+    color: white;
+    padding: 10px;
+  }
+
+  .midnight {
+    background-color: rgb(34, 31, 37);
+    color: white;
+    padding: 10px;
+  }
+
+  .peach {
+    background-color: rgb(238, 172, 129);
+    color: white;
+    padding: 10px;
+  }
+
+  .sunflower {
+    background-color: rgb(243, 218, 134);
+    color: white;
+    padding: 10px;
+  }
+
+  .rose {
+    background-color: rgb(238, 129, 129);
+    color: white;
+    padding: 10px;
+  }
+
+  .test5 {
+    background-color: rgb(228, 130, 171);
+    color: white;
+    padding: 10px;
+  }
+
+  .nav {
+    color: white;
+  }
+
+  form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 500px;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* Provide space to type some text */
+  height: 5em;
+}
+
+.button {
+  /* Align buttons with the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: .5em;
+}
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Lato", sans-serif;
+  }
+
+  body,
+  html {
+    height: 100%;
+    color: #777;
+    background-color: rgb(22, 18, 26);
+    background-color: white;
+    line-height: 1.8;
+  }
+
+
+  /* Create a Parallax Effect */
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+
+  /* First image (Logo. Full height) */
+  .bgimg-1 {
+    background-image: url("images/background3.jpg");
+    min-height: 100%;
+  }
+
+  /* Second image (Portfolio) */
+  .bgimg-2 {
+    background-image: url("images/background2.jpg");
+    min-height: 400px;
+  }
+
+  /* Third image (Contact) */
+  .bgimg-3 {
+    background-image: url("images/pixel7.jpg");
+    min-height: 400px;
+  }
+
+  .features {
+    background-image: white;
+    color: grey;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .features figure {
+    margin: auto;
+    text-align: center;
+    width: 200px;
+  }
+
+  .features figure img {
+    width: 200px;
+    border-radius: 50%;
+  }
+
+
+  .w3-wide {
+    letter-spacing: 10px;
+  }
+
+  .w3-hover-opacity {
+    cursor: pointer;
+  }
+
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1600px) {
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      background-attachment: scroll;
+      min-height: 400px;
+    }
+  }
+</style>
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="nav w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+        onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#home" class="w3-bar-item w3-button w3-hover-black">HOME</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-black"><i class="fa fa-user"></i> ABOUT</a>
+      <a href="projects.html" class="w3-bar-item w3-button w3-hide-small w3-hover-black"><i class="fa fa-th"></i>
+        PROJECTS</a>
+      <a href="resume.html" class="w3-bar-item w3-button w3-hide-small w3-hover-black"><i class="fa fa-laptop"></i>
+        RESUME</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-black"><i class="fa fa-envelope"></i>
+        CONTACT</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-black">
+        <i class="fa fa-search"></i>
+      </a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-hover-black">
+      <a href="#about" class="w3-bar-item w3-button w3-hover-black" onclick="toggleFunction()">ABOUT</a>
+      <a href="projects.html" class="w3-bar-item w3-button w3-hover-black" onclick="toggleFunction()">PROJECTS</a>
+      <a href="resume.html" class="w3-bar-item w3-button w3-hover-black" onclick="toggleFunction()">RESUME</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hover-black" onclick="toggleFunction()">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- First Parallax Image with Logo Text -->
+  <div class="anim bgimg-1 bgimg-1 w3-display-container" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">
+            <span class="w3-hide-small"></span>PERSONAL WEBSITE
+        </span>
+    </div>
+  </div>
+
+  <!-- Container (About Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center animate__animated animate__fadeInDown">CAROLINE GRAHAM</h3>
+    <p class="w3-center pink"><em>Computer Science Major</em></p>
+    <p>The purpose of this website is to provide further information pertaining to myself that may not come across on a resume alone,
+      as well as showcase personal projects I am interested in. Here you will find an interactive
+      resume, passion projects, and contact information.
+    </p>
+    <div class="w3-row">
+      <div class=" w3-col m6 w3-center w3-padding-small">
+        <p><b><i class="fa fa-user w3-margin-right"></i>Caroline Graham</b></p><br>
+        <section class="features">
+          <figure>
+            <img src="images/me2.jpg" class="w3-round w3-image w3-animate-opacity w3-hover-opacity-off"
+              alt="Photo of Me" width="500" height="333">
+          </figure>
+        </section>
+      </div>
+
+      <!-- Hide this text on small devices -->
+      <div class="w3-col m6 w3-hide-small w3-padding-64">
+        <p>I am currently a junior Computer Science student at Rowan University.
+          I've always had an interest in technology from a young age, and after taking my
+          first computer science class in high school, I knew that path was right for me. I've been coding
+          ever since, and now I finally want to start showcasing it all into one place.
+        </p>
+      </div>
+    </div>
+    <p class="midnight w3-large w3-center w3-padding-16 animate__animated animate__fadeIn">Programming Languages</p>
+    <p class="w3-wide"><i class="fa fa-laptop"></i>JAVA</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small test5 w3-center" style="width:90%">90%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-laptop"></i>Python</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small rose w3-center" style="width:85%">85%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-laptop"></i>C</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small peach w3-center" style="width:75%">75%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-laptop"></i>Oracle SQL</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small sunflower w3-center" style="width:45%">45%</div>
+    </div>
+  </div>
+
+  <div class="w3-row w3-center test5 w3-padding-16">
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge ">4+</span><br>
+      Languages
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">5+</span><br>
+      Years Programming
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">15+</span><br>
+      CS Courses
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">3+</span><br>
+      Personal Projects
+    </div>
+  </div>
+
+  <!-- Third Parallax Image with Portfolio Text -->
+  <div class="anim bgimg-3 w3-display-container">
+    <div class="w3-display-middle">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">CONTACT</span>
+    </div>
+  </div>
+
+  <!-- Container (Contact Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">ROWAN UNIVERSITY</h3>
+    <p class="w3-center"><em>Expected graduation: May 2022</em></p>
+
+    <div class="w3-row w3-padding-small w3-section">
+      <div class="w3-col m4 w3-container animate__animated animate__fadeIn">
+        <img src="images/RU.png" class="w3-image w3-round" style="width:100%">
+      </div>
+      <div class="w3-col m8 w3-panel">
+        <div class="w3-large w3-margin-bottom w3-padding-64">
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> New Jersey, USA<br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: (407) 405-6622<br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+            <a href="mailto:carolinegraham6622@gmai.com??subject = Feedback&body = Message">carolinegraham6622@gmail.com</a><br>
+          <i class="fa fa-laptop fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i><a href="https://github.com/carolinegraham6622">Github</a><br>
+        </div>
+
+        <!-- CONTACT FORM
+        <p>Drop a message <i class="fa fa-paper-plane"></i> if you have any questions!</p>
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-right w3-section" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </form>
+        -->
+      </div>
+    </div>
+
+
+    <!--
+    <div class= "w3-content w3-container w3-padding-64" id= "contact">
+    <form class="contact-form" action="contact-form.php" method="post">
+			<ul>
+				<li>
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" />
+				</li>
+				<li>
+					<label for="email">E-mail:</label>
+					<input type="email" id="email" name="email" />
+				</li>
+				<li>
+					<label for="msg">Message:</label>
+					<textarea id="msg" name="msg"></textarea>
+				</li>
+				<li class="button">
+					<button type="submit">Send your message</button>
+				</li>
+			</ul>
+		</form>
+    </div>
+    -->
+
+    <!--LinkedIn Badge-->
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+      <div class="LI-profile-badge w3-center" data-version="v1" data-size="large" data-locale="en_US"
+        data-type="horizontal" data-theme="light" data-vanity="caroline-graham-69843a157"><a class="LI-simple-link"
+          href='https://www.linkedin.com/in/caroline-graham-69843a157?trk=profile-badge'>Caroline Graham</a></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center midnight w3-padding-64 w3-hover-opacity-off">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+        <p>Send an email, connect on LinkedIn or check out my GitHub below!</p>
+      <a href="mailto:carolinegraham6622@gmail.com?subject = Feedback&body = Message">
+        <i class="fa fa-envelope w3-hover-opacity"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/caroline-graham-69843a157/">
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+      </a>
+      <a href="https://github.com/carolinegraham6622">
+        <i class="fa fa-laptop w3-hover-opacity"></i>
+      </a>
+    </div>
+    <p>Assests from: <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+        class="w3-hover-text-green">w3.css</a></p>
+  </footer>
+
+  <script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+    // Change style of navbar on scroll
+    window.onscroll = function () { myFunction() };
+    function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+      } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+      }
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+
+</body>
+
+</html>
